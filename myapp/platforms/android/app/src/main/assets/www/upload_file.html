@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    
+
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- <script type="text/javascript" src="js/upload_file.js"></script> -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <title>music</title>
+</head>
+<style type="text/css">
+  video {
+    width: 92vw;
+    height: 51.75vw;
+  }
+</style>
+<body>
+<div data-role="page" class="jqm-demos">
+    <div data-role="header" data-position="fixed">
+      <a href="#" class="ui-btn ui-btn-icon-left ui-icon-carat-l" onclick="history.back()">上一頁</a>
+      <h1>上傳</h1>
+      <div data-role="navbar">
+          <ul>
+              <li><a href="#" class="ui-btn-active" onclick="song_toggle()">歌曲</a></li>
+              <li><a href="#" onclick="singer_toggle()">歌手</a></li>
+          </ul>
+      </div>
+    </div>
+    <div role="main" class="ui-content" id="main_content">
+      <form hidden="true" class="form" action="" method="post" id="uploadForm_singer">
+        <div class="ui-field-contain">
+          <label for="text-4">歌手名稱:</label>
+          <input type="text" data-mini="true" name="name" id="singer_singer_name" value="">
+          <label for="text-4">團體:</label>
+          <input type="text" data-mini="true" name="group" id="singer_group" value="">
+          <label for="text-4">歌手照片:</label>
+          <input type="file" id="img1" src="" name="singer_img"/>
+          <input type="submit" data-inline="true" value="上傳" onclick="">
+        </div>
+      </form>
+      <form class="form" action="" method="post" id="uploadForm_song">
+        <label for="text-4">歌曲名稱:</label>
+        <input type="text" data-mini="true" name="name" id="song_song_name" value="">
+        <label for="select-native-singer">歌手名稱:</label>
+        <select name="select-native-singer" id="select_singer" data-mini="true">
+
+        </select>
+        <label for="text-4">歌曲連結:</label>
+        <input type="text" data-mini="true" name="name" id="song_song_url" value="">
+        <label for="select-native-1">語言:</label>
+        <select name="select-native-1" id="select_language" data-mini="true">
+        </select>
+        <label for="text-4">歌曲照片:</label>
+        <input type="file" id="img2" src="" name="song_img"/>
+        <input type="submit" data-inline="false" value="上傳" onclick="">
+      </form>
+    </div>
+    <div data-role="footer" data-position="fixed">
+       <div data-demo-html="true">
+           <div data-role="footer">
+               <div data-role="navbar">
+                   <ul>
+                       <li><a href="#" data-icon="grid" name="index.html" onclick="to_page(this.name)">音樂</a></li>
+                       <li><a href="#" data-icon="star" class="ui-btn-active">上傳</a></li>
+                       <li><a href="#" data-icon="gear">設定</a></li>
+                   </ul>
+               </div><!-- /navbar -->
+            </div><!-- /footer -->
+       </div><!--/demo-html -->
+    </div>
+</div>
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" src="js/upload_file.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/jquery.mobile-1.4.5.min.js"></script>     -->
+</body>
+
+</html>
